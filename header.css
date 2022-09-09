@@ -1,0 +1,342 @@
+.GlobalPrimaryNav {
+    position: relative;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+
+.GlobalPrimaryNav__logoPlaceholder {
+    position: absolute;
+    top: 0.875rem;
+    left: 3.25rem;
+    height: 6.25rem;
+    width: 6.25rem;
+}
+
+.UtilityNav {
+    background-color: #f1f3f5;
+    padding-left: 11.4375rem;
+    justify-content: flex-end;
+    padding-right: 2rem;
+    height: 3.5rem;
+}
+
+.UtilityNav__content {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    height: inherit;
+}
+
+.UtilityNav__link {
+    color: #2e426b;
+    line-height: 1.2;
+    padding: 0 0.5rem;
+    margin: 0 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    font-size: .875rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.PrimaryNav {
+    height: 4.875rem;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.05)
+}
+
+.PrimaryNav__content {
+    align-items: center;
+    font-size: 1.125rem;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2.5rem;
+    height: inherit;
+}
+
+.PrimaryNav__link {
+    max-width: 6.25rem;
+    font-weight: 400;
+    color: #0c1e44;
+    line-height: 1.2;
+    padding: 0 .6875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    margin: 0 .6875rem;
+}
+
+.PrimaryNav__search {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 0.75rem 0 1.375rem;
+    padding: 0 0.5rem 0 2.75rem;
+    border-left: 1px solid #e5e9ef;
+}
+
+.PrimaryNav__searchButtonIcon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.1875rem;
+}
+
+.PrimaryNav__searchButton {
+    display: flex;
+}
+
+.PrimaryNav__searchButtonText {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    color: #0c1e44;
+}
+
+.GlobalSearchForm {
+    width: 100%;
+    position: relative;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.GlobalSearch__svg {
+    /* position: absolute; */
+    top: 1.6875rem;
+    bottom: 1.6875rem;
+    left: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    z-index: 1;
+}
+
+.GlobalSearch__svg--nav {
+    top: 0.875rem;
+    bottom: 0.875rem;
+    left: 1rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+
+.GlobalSearch__submit.btn {
+    top: 0.75rem;
+    bottom: 0.75rem;
+    right: 1rem;
+    width: 3.375rem;
+    height: 3.375rem;
+    min-height: unset;
+}
+
+.GlobalSearch__submit--nav.btn {
+    top: 0.5625rem;
+    right: 1rem;
+    bottom: 0.5625rem;
+    width: 1.625rem;
+    height: 1.625rem;
+}
+
+.GlobalSearch__submitSvg--nav {
+    width: 0.6875rem;
+    height: 0.6875rem;
+}
+
+.NavBar {
+    display: none!important;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    height: 3.625rem;
+    padding-right: 0.625rem;
+}
+
+.NavBar__logo a {
+    display: block;
+    height: 3.625rem;
+    width: 3.875rem;
+}
+
+.NavBar__menu {
+    right: 0.75rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.GlobalSearchMobile__menu {
+    margin-right: 1.25rem;
+}
+
+.GlobalSearchMobile__menuSvg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.NavMenuBtn__svg {
+    width: 1.5625rem;
+    height: 1.0625rem;
+}
+
+.NavBar__modal{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+    position: absolute;
+    width:100%;
+    top:0;
+    left:0;
+    z-index: initial;
+}
+
+.NavBar__hamburger:hover > .NavBar__modal{
+    display: block;
+}
+
+.NavBar__close:hover + .NavBar__modal {
+    display: block;
+}
+
+.NavBar__hamburger:hover + .NavBar__close{
+    display: block;
+}
+
+.NavBar__close {
+    display: none;
+    position: absolute;
+    top: 0.4375rem;
+    right: 5.5rem;
+    z-index: 1;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0.75rem;
+}
+
+.NavBar__close:active + .NavBar__modal {
+    display: none;
+}
+
+.NavBar__modalHeader {
+    height: 3.625rem;
+}
+
+.NavBar__modalLogo{
+    height: 3.625rem;
+}
+
+
+@media (max-width: 992px) {
+    .GlobalPrimaryNav{
+        display: none;
+    }
+
+    .NavBar {
+        display: flex!important;
+    }
+
+    .UtilityNav {
+        height:unset;
+        padding: 0.75rem;
+        width:100%;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        flex-wrap: wrap;
+    }
+
+    .UtilityNav__item {
+        display: flex;
+        align-items: center;
+        height: unset;
+        margin: 0.25rem;
+        height: 4.8125rem;
+    }
+
+    .UtilityNav__item--4up {
+        flex: 1 1 auto;
+        width: 4.125rem;
+    }
+
+    .UtilityNav__link {
+        display: flex;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1rem 0.5rem 0.625rem;
+        text-decoration: none;
+        letter-spacing: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        -webkit-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 7px;
+        height: 4.8125rem;
+        color: #6a0910;
+        word-break: break-word;
+        margin: 0;
+    }
+
+    .UtilityNav__iconWrapper {
+        margin-bottom: 0.4375rem;
+        height: 1.125rem;
+        width: inherit;
+        text-align: center;
+    }
+
+    .UtilityNav__icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        color: #6a0910;
+        fill:currentColor;
+    }
+
+    .UtilityNav__linkText {
+        pointer-events: none;
+        font-size: .625rem;
+        font-weight: 500;
+        line-height: .7325rem;
+        text-align: center;
+        color: #333333;
+    }
+
+    .PrimaryNav {
+        margin-top: 1rem;
+        box-shadow: none;
+    }
+
+    .PrimaryNav__content{
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        height: unset;
+        padding-right: 0;
+    }
+
+    .PrimaryNav__link {
+        color: #0c1e44;
+        display: flex;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        cursor: pointer;
+        font-weight: 500;
+        max-width: unset;
+        justify-content: left;
+        margin: 0;
+    }
+}
