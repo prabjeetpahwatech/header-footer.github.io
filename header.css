@@ -194,27 +194,42 @@
     width:100%;
     top:0;
     left:0;
-    z-index: initial;
+    z-index: 9999;
+}
+
+.NavBar__hamburgerLayer {
+    position:absolute;
+    background-color: transparent;
+    z-index: 999;
+    height: 0;
+    width: 100%;
+}
+
+button.NavBar__hamburger:hover ~ div.NavBar__hamburgerLayer {
+    height: 100%;
+    animation: menuLayer 1s ease-in-out 1s;
+}
+
+.NavBar__close:active + .NavBar__hamburgerLayer {
+    height: 100%;
 }
 
 .NavBar__hamburger:hover > .NavBar__modal{
     display: block;
 }
 
-.NavBar__close:hover + .NavBar__modal {
-    display: block;
-}
-
 .NavBar__hamburger:hover + .NavBar__close{
     display: block;
+    animation: modalCloseButton 0.01s ease-in;
 }
 
 .NavBar__close {
     display: none;
     position: absolute;
     top: 0.4375rem;
-    right: 5.5rem;
-    z-index: 1;
+    /* right: 5.5rem; */
+    right: 0.625rem;
+    z-index: 9999;
     width: 2.75rem;
     height: 2.75rem;
     padding: 0.75rem;
@@ -228,13 +243,13 @@
     height: 3.625rem;
 }
 
-.NavBar__modalLogo{
+.NavBar__modalLogo {
     height: 3.625rem;
 }
 
 
 @media (max-width: 992px) {
-    .GlobalPrimaryNav{
+    .GlobalPrimaryNav {
         display: none;
     }
 
@@ -339,4 +354,14 @@
         justify-content: left;
         margin: 0;
     }
+}
+
+@keyframes modalCloseButton {
+    from {right: 5.5rem;}
+    to {right: 0.625rem;}
+}
+
+@keyframes menuLayer {
+    from {height: 100%;}
+    to {height: 0;}
 }
