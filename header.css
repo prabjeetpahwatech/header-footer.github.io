@@ -248,7 +248,7 @@ button.NavBar__hamburger:hover ~ div.NavBar__hamburgerLayer {
 }
 
 
-@media (max-width: 992px) {
+@media (any-pointer: coarse) and (max-width: 992px) {
     .GlobalPrimaryNav {
         display: none;
     }
