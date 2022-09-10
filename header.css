@@ -160,6 +160,7 @@
     display: block;
     height: 3.625rem;
     width: 3.875rem;
+    cursor: pointer;
 }
 
 .NavBar__menu {
@@ -185,7 +186,7 @@
     height: 1.0625rem;
 }
 
-.NavBar__modal{
+.NavBar__modal {
     display: none;
     height: 100vh;
     width: 100vw;
@@ -195,6 +196,7 @@
     top:0;
     left:0;
     z-index: 9999;
+    cursor: default;
 }
 
 .NavBar__hamburgerLayer {
@@ -216,11 +218,6 @@ button.NavBar__hamburger:hover ~ div.NavBar__hamburgerLayer {
 
 .NavBar__hamburger:hover > .NavBar__modal{
     display: block;
-}
-
-.NavBar__hamburger:hover + .NavBar__close{
-    display: block;
-    animation: modalCloseButton 0.01s ease-in;
 }
 
 .NavBar__close {
@@ -247,8 +244,14 @@ button.NavBar__hamburger:hover ~ div.NavBar__hamburgerLayer {
     height: 3.625rem;
 }
 
-
 @media (any-pointer: coarse) and (max-width: 992px) {
+    .NavBar__hamburger:hover + .NavBar__close{
+        display: block;
+        animation: modalCloseButton 0.01s ease-in;
+    }
+}
+
+@media screen and (max-width: 992px) {
     .GlobalPrimaryNav {
         display: none;
     }
