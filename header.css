@@ -247,7 +247,7 @@ button.NavBar__hamburger:hover ~ div.NavBar__hamburgerLayer {
 @media (any-pointer: coarse) and (max-width: 992px) {
     .NavBar__hamburger:hover + .NavBar__close{
         display: block;
-        animation: modalCloseButton 0.01s ease-in;
+        animation: modalCloseButton 0.1s ease-in;
     }
 }
 
