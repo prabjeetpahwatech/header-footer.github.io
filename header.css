@@ -204,6 +204,7 @@
     z-index: 999;
     height: 0;
     width: 100%;
+    animation: overlay 1s ease-in-out;
 }
 
 button.NavBar__hamburger:hover ~ div.NavBar__hamburgerLayer {
@@ -363,7 +364,7 @@ button.NavBar__hamburger:hover ~ div.NavBar__hamburgerLayer {
     to {right: 0.625rem;}
 }
 
-@keyframes menuLayer {
+@keyframes overlay {
     from {height: 100%;}
     to {height: 0;}
 }
